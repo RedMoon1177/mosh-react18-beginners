@@ -1,20 +1,36 @@
-import { Fragment } from "react/jsx-runtime";
+import { useState } from "react";
 
-function ListGroup() {
-  let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
-  items = [];
+interface Props {
+  items: string[];
+  heading: string;
+  onSelectItem: (item: string) => void;
+}
 
-  const getMessage = () => {
-    return items.length === 0 ? <p>No item found.</p> : null;
-  };
+function ListGroup({ items, heading, onSelectItem }: Props) {
+  // let selectedIndex = 0; // this is a local variable and will not be changed its value after ListGroup() is called.
+  // => use hook to manage global states which will be changed over time.
+
+  // Hook
+  const [selectedIndex, setSelectedIndex] = useState(-1);
 
   return (
     <>
-      <h1>List</h1>
-      {getMessage()}
+      <h1>{heading}</h1>
+      {items.length === 0 && <p>No item found.</p>}
       <ul className="list-group">
-        {items.map((item) => (
-          <li key={item} className="list-group-item">
+        {items.map((item, index) => (
+          <li
+            key={item}
+            className={
+              selectedIndex === index
+                ? "list-group-item active"
+                : "list-group-item"
+            }
+            onClick={() => {
+              setSelectedIndex(index);
+              onSelectItem(item);
+            }}
+          >
             {item}
           </li>
         ))}
