@@ -1,4 +1,4 @@
-import React from "react";
+import styles from "./Button.module.css";
 
 interface Props {
   children: string;
@@ -11,7 +11,10 @@ const Button = ({ children, onClick, color = "primary" }: Props) => {
   // the onClick function will be passed from the outside (App.tsx)
   // set default --> color = primary
   return (
-    <button className={"btn btn-" + color} onClick={onClick}>
+    <button
+      className={[styles.btn, styles["btn-" + color]].join(" ")}
+      onClick={onClick}
+    >
       {children}
     </button>
   );
