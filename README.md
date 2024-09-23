@@ -17,3 +17,12 @@
 
 - lesson 4: **Pure Function**
   - given the same input, always returns the same result.
+- lesson 5:
+  - React component is rendered twice: in development mode and in strict mode
+    <code>
+    ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+    <React.StrictMode>
+    <App />
+    </React.StrictMode>
+    );
+    </code>
