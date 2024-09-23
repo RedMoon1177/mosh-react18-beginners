@@ -1,10 +1,12 @@
-import "./App.css";
-import Like from "./components/Like";
+import { useState } from "react";
+import Message from "./Message";
 
 function App() {
   return (
     <div>
-      <Like onClick={() => console.log("clicked")} />
+      <Message />
+      <Message />
+      <Message />
     </div>
   );
 }
