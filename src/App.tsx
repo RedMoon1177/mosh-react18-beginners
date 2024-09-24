@@ -1,27 +1,35 @@
 import { useState } from "react";
-import ExpandableText from "./components/ExpandableText";
+import Form from "./components/Form";
 
-// Managing Component State - lesson 13 ///////
 function App() {
   return (
     <>
-      <ExpandableText maxChars={100}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
-        cupiditate quaerat consectetur eaque unde corrupti recusandae. Unde
-        doloribus, aperiam vero aut molestias magni quisquam aliquid adipisci
-        excepturi corporis delectus similique cupiditate ducimus rem illum
-        repellat consectetur deserunt exercitationem at reprehenderit enim natus
-        recusandae quis ad. Temporibus ducimus soluta laudantium. Quo blanditiis
-        quae tempora reprehenderit iusto nam obcaecati ea nemo expedita magnam,
-        qui unde, exercitationem vitae quasi voluptatibus maiores ducimus
-        molestias quam voluptas in sapiente architecto consequatur! Dolore,
-        quidem perspiciatis sapiente libero doloribus qui sequi cumque facere
-        delectus ratione odit vitae dolorem provident quae non corrupti aperiam
-        accusamus earum voluptatibus atque.
-      </ExpandableText>
+      <Form />
     </>
   );
 }
+
+// Managing Component State - lesson 13 ///////
+// function App() {
+//   return (
+//     <>
+//       <ExpandableText maxChars={100}>
+//         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
+//         cupiditate quaerat consectetur eaque unde corrupti recusandae. Unde
+//         doloribus, aperiam vero aut molestias magni quisquam aliquid adipisci
+//         excepturi corporis delectus similique cupiditate ducimus rem illum
+//         repellat consectetur deserunt exercitationem at reprehenderit enim natus
+//         recusandae quis ad. Temporibus ducimus soluta laudantium. Quo blanditiis
+//         quae tempora reprehenderit iusto nam obcaecati ea nemo expedita magnam,
+//         qui unde, exercitationem vitae quasi voluptatibus maiores ducimus
+//         molestias quam voluptas in sapiente architecto consequatur! Dolore,
+//         quidem perspiciatis sapiente libero doloribus qui sequi cumque facere
+//         delectus ratione odit vitae dolorem provident quae non corrupti aperiam
+//         accusamus earum voluptatibus atque.
+//       </ExpandableText>
+//     </>
+//   );
+// }
 
 // Managing Component State - lesson 12 ///////
 // function App() {
